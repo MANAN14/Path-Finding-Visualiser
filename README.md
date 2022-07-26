@@ -1,5 +1,5 @@
 
-# Path Finding Visualiser
+# Path Finding Visualizer
 
 Visualization is a powerful tool for understanding any subject more quickly than traditional approaches. 
 This project aims to develop a web-based application called "Path Finding Visualizer" which shows Implementation of Dijkstra's algorithm which gives the shortest path in weighted graph with non negative weights . 
