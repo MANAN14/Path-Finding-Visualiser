@@ -5,6 +5,7 @@ Visualization is a powerful tool for understanding any subject more quickly than
 This project aims to develop a web-based application called "Path Finding Visualizer" which shows Implementation of Dijkstra's algorithm which gives the shortest path in weighted graph with non negative weights . 
 The goal of this project is to do all of these tasks while using some HTML, CSS, JavaScript, and React Framework skills. The final output is a web application that allows any user to readily view and understand how the algorithms works. 
 
+Check out our app at [PathFinding-Visualiser](https://velvety-marigold-e2320d.netlify.app/)
 
 ## Demo
 
@@ -20,16 +21,11 @@ The goal of this project is to do all of these tasks while using some HTML, CSS,
 ## Future Scope of Improvement
 
 - Make it responsive
-- Add more sorting algorithms to our project
-- Run all the algorithms together for the same array to actually understand the time complexity.
-- Vary speed when sorting is in process
+- Add more graph based algorithms to visualize
 
 ## Tech Stack
 
 **Client:** React,  HTML, CSS, JavaScript
-
-
-
 
 ## How to run?
 
@@ -60,10 +56,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-
 ## Contributer
 
-https://github.com/kushgandhi13
+[Kush Gandhi](https://github.com/kushgandhi13)
 
 
 ## License
