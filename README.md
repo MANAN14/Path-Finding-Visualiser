@@ -8,7 +8,7 @@ The goal of this project is to do all of these tasks while using some HTML, CSS,
 
 ## Demo
 
-
+![](https://github.com/MANAN14/Path-Finding-Visualiser/blob/main/PathFinder.gif)
 
 ## Features
 
