@@ -9,7 +9,7 @@ Check out our app at [PathFinding-Visualizer](https://velvety-marigold-e2320d.ne
 
 ## Demo
 
-![](https://github.com/MANAN14/Path-Finding-Visualiser/blob/main/PathFinder.gif)
+![](https://github.com/MANAN14/Path-Finding-Visualizer/blob/main/PathFinder.gif)
 
 ## Features
 
@@ -25,7 +25,7 @@ Check out our app at [PathFinding-Visualizer](https://velvety-marigold-e2320d.ne
 
 ## Tech Stack
 
-**Client:** React,  HTML, CSS, JavaScript
+React,  HTML, CSS, JavaScript
 
 ## How to run?
 
