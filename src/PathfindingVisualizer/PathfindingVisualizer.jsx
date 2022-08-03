@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import Node from "./Node/Node.jsx";
-import { showPopUp } from "./Tutorial/Tutorial.jsx";
+import Node from "./Node/Node.js";
+import { showPopUp } from "./Tutorial/Tutorial.js";
 
 import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
 
@@ -12,10 +12,10 @@ import "./PathfindingVisualizer.css";
 let row_max_length = 20;
 let col_max_length = 44;
 
-let START_NODE_ROW = 9;
-let START_NODE_COL = 8;
-let FINISH_NODE_ROW = 9;
-let FINISH_NODE_COL = 31;
+let START_NODE_ROW = 0;
+let START_NODE_COL = 0;
+let FINISH_NODE_ROW = 19;
+let FINISH_NODE_COL = 43;
 
 export default function PathfindingVisualizer(props) {
   const [visulizerState, setVisulizerState] = useState({
@@ -59,13 +59,12 @@ export default function PathfindingVisualizer(props) {
   // Creating grid
   useEffect(() => {
     const grid = getInitialGrid();
-    setVisulizerState({ ...visulizerState, grid });
-    // eslint-disable-next-line
+    setVisulizerState({ ...visulizerState, grid});
   }, []);
 
   // Get New grid with toggled weight
   const getNewGridWithWeightToggled = (grid, row, col, weight) => {
-    const newGrid = [...grid];
+    const newGrid = grid;
     const node = newGrid[row][col];
     const newNode = {
       ...node, // copying other properties of the node
@@ -77,16 +76,16 @@ export default function PathfindingVisualizer(props) {
   };
 
   function getNewGridWithWallToggled(grid, row, col) {
-    const newGrid = [...grid];
+    const newGrid = grid;
     const node = newGrid[row][col];
     const newNode = {
-      ...node, // copying other properties of the node
+      ...node, 
       isWall: !node.isWall,
     };
     newGrid[row][col] = newNode;
     return newGrid;
   }
-
+  //mousedown,mouseenter,mouseup are javascript mouse event handlers
   // On pressing the mouse down
   function handleMouseDown(row, col) {
     if (visulizerState.topMessage !== "Dijkstra Algorithm") return;
@@ -110,11 +109,10 @@ export default function PathfindingVisualizer(props) {
       mouseIsPressed: true,
     });
   }
-
   // On entering the new node element.
   function handleMouseEnter(row, col) {
     if (visulizerState.topMessage !== "Dijkstra Algorithm") return;
-    if (!visulizerState.mouseIsPressed) return;
+    if (!visulizerState.mouseIsPressed) return;  // if mouseIsPressed == false then you can't select walls or weights
 
     let newGrid = [];
 
@@ -240,7 +238,7 @@ export default function PathfindingVisualizer(props) {
     setVisulizerState({ ...visulizerState, weight: event.target.value });
   }
 
-  function pointChangeHandler() {
+  function pointChangeHandler() {  //assigns class to start and end point
     if (notCorrect()) return; //To check if the provided value is suitable or not.
 
     document.getElementById(
@@ -357,7 +355,7 @@ function ButtonTask({
       changeWeight: false,
       distanceToBeTraveled: 0,
     });
-    window.location.reload(false);
+    window.location.reload();
   }
 
   if (topMessage === "Shortest Path") {
@@ -438,7 +436,7 @@ function TextBox({
           min="0"
           max={row_max_length - 1}
           onChange={pointChangeHandler}
-          defaultValue="9"
+          defaultValue="0"
         ></input>
         <input
           type="number"
@@ -447,7 +445,7 @@ function TextBox({
           min="0"
           max={col_max_length - 1}
           onChange={pointChangeHandler}
-          defaultValue="8"
+          defaultValue="0"
         ></input>
       </div>
 
@@ -460,7 +458,7 @@ function TextBox({
           min="0"
           max={row_max_length - 1}
           onChange={pointChangeHandler}
-          defaultValue="9"
+          defaultValue="19"
         ></input>
         <input
           type="number"
@@ -469,7 +467,7 @@ function TextBox({
           min="0"
           max={col_max_length - 1}
           onChange={pointChangeHandler}
-          defaultValue="31"
+          defaultValue="43"
         ></input>
       </div>
 
